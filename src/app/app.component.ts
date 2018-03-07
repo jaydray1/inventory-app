@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  product: Product;
+
+  constructor() {
+    let newProduct = new Product(
+      'NiceHat',
+      'A nice Black Hat',
+      ''
+    )
+  }
 }
